@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 130" width="160" height="130">
+  <defs>
+    <style>
+      .pl1 { animation: waveL1 3.5s ease-in-out infinite; transform-origin: 80px 65px; }
+      .pl2 { animation: waveL2 3.5s ease-in-out infinite; transform-origin: 80px 65px; }
+      .pl3 { animation: waveL3 3.5s ease-in-out infinite; transform-origin: 80px 65px; }
+      .pr1 { animation: waveR1 3.5s ease-in-out infinite; transform-origin: 80px 65px; }
+      .pr2 { animation: waveR2 3.5s ease-in-out infinite; transform-origin: 80px 65px; }
+      .pr3 { animation: waveR3 3.5s ease-in-out infinite; transform-origin: 80px 65px; }
+
+      @keyframes waveL1 {
+        0%,100% { transform: rotate(0deg) translateY(0px); }
+        50%      { transform: rotate(-3deg) translateY(-3px); }
+      }
+      @keyframes waveL2 {
+        0%,100% { transform: rotate(0deg) translateY(0px); }
+        50%      { transform: rotate(-6deg) translateY(-5px); }
+      }
+      @keyframes waveL3 {
+        0%,100% { transform: rotate(0deg) translateY(0px); }
+        50%      { transform: rotate(-9deg) translateY(-7px); }
+      }
+      @keyframes waveR1 {
+        0%,100% { transform: rotate(0deg) translateY(0px); }
+        50%      { transform: rotate(3deg) translateY(-3px); }
+      }
+      @keyframes waveR2 {
+        0%,100% { transform: rotate(0deg) translateY(0px); }
+        50%      { transform: rotate(6deg) translateY(-5px); }
+      }
+      @keyframes waveR3 {
+        0%,100% { transform: rotate(0deg) translateY(0px); }
+        50%      { transform: rotate(9deg) translateY(-7px); }
+      }
+    </style>
+
+    <filter id="bookShadow">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#1A0800" flood-opacity="0.45"/>
+    </filter>
+    <filter id="pageShadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#3B1A00" flood-opacity="0.3"/>
+    </filter>
+
+    <!-- Left cover -->
+    <linearGradient id="covL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#A57040"/>
+      <stop offset="50%"  stop-color="#7A4E20"/>
+      <stop offset="100%" stop-color="#4A2A06"/>
+    </linearGradient>
+    <!-- Right cover -->
+    <linearGradient id="covR" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#B8804A"/>
+      <stop offset="50%"  stop-color="#8B5E28"/>
+      <stop offset="100%" stop-color="#5A380E"/>
+    </linearGradient>
+    <!-- Spine -->
+    <linearGradient id="spineG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#2E1600"/>
+      <stop offset="45%"  stop-color="#6B421A"/>
+      <stop offset="55%"  stop-color="#8A5C2C"/>
+      <stop offset="100%" stop-color="#2E1600"/>
+    </linearGradient>
+    <!-- Bottom thickness -->
+    <linearGradient id="botG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#5C3810"/>
+      <stop offset="100%" stop-color="#1E0A00"/>
+    </linearGradient>
+    <!-- Page stack edges -->
+    <linearGradient id="stackL" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#F0D890"/>
+      <stop offset="100%" stop-color="#C8A040"/>
+    </linearGradient>
+    <linearGradient id="stackR" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%"   stop-color="#F0D890"/>
+      <stop offset="100%" stop-color="#C8A040"/>
+    </linearGradient>
+    <!-- Page creams -->
+    <linearGradient id="pgL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#FEFAF0"/>
+      <stop offset="70%"  stop-color="#EDD498"/>
+      <stop offset="100%" stop-color="#C89840"/>
+    </linearGradient>
+    <linearGradient id="pgR" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#FEFAF0"/>
+      <stop offset="70%"  stop-color="#EDD498"/>
+      <stop offset="100%" stop-color="#C89840"/>
+    </linearGradient>
+    <!-- Cover sheen -->
+    <linearGradient id="sheenL" x1="0%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%"   stop-color="#FFFFFF" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sheenR" x1="100%" y1="0%" x2="30%" y2="100%">
+      <stop offset="0%"   stop-color="#FFFFFF" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ground shadow -->
+  <ellipse cx="80" cy="107" rx="58" ry="7" fill="#1A0800" opacity="0.18"/>
+
+  <!-- ── 3D bottom thickness ── -->
+  <path d="M20 74 C40 67 60 64 78 66 L82 66 C100 64 120 67 140 74 L140 82 C120 75 100 72 82 74 L78 74 C60 72 40 75 20 82 Z"
+        fill="url(#botG)" filter="url(#bookShadow)"/>
+
+  <!-- ── Left cover ── -->
+  <path d="M78 20 C58 17 36 22 20 32 L20 74 C40 67 60 64 78 66 Z"
+        fill="url(#covL)" filter="url(#bookShadow)"/>
+  <path d="M78 20 C58 17 40 23 28 30 L28 54 C42 47 61 44 78 46 Z"
+        fill="url(#sheenL)"/>
+
+  <!-- ── Right cover ── -->
+  <path d="M82 20 C102 17 124 22 140 32 L140 74 C120 67 100 64 82 66 Z"
+        fill="url(#covR)" filter="url(#bookShadow)"/>
+  <path d="M82 20 C102 17 120 23 132 30 L132 54 C118 47 99 44 82 46 Z"
+        fill="url(#sheenR)"/>
+
+  <!-- ── Page stack edge left ── -->
+  <path d="M16 33 L20 32 L20 74 L16 75 Z" fill="url(#stackL)"/>
+  <line x1="16" y1="38" x2="20" y2="37" stroke="#FDE8A0" stroke-width="0.6" opacity="0.9"/>
+  <line x1="16" y1="44" x2="20" y2="43" stroke="#FDE8A0" stroke-width="0.6" opacity="0.9"/>
+  <line x1="16" y1="50" x2="20" y2="49" stroke="#FDE8A0" stroke-width="0.6" opacity="0.9"/>
+  <line x1="16" y1="56" x2="20" y2="55" stroke="#FDE8A0" stroke-width="0.6" opacity="0.9"/>
+  <line x1="16" y1="62" x2="20" y2="61" stroke="#FDE8A0" stroke-width="0.6" opacity="0.9"/>
+  <line x1="16" y1="68" x2="20" y2="67" stroke="#FDE8A0" stroke-width="0.6" opacity="0.9"/>
+
+  <!-- ── Page stack edge right ── -->
+  <path d="M144 33 L140 32 L140 74 L144 75 Z" fill="url(#stackR)"/>
+  <line x1="144" y1="38" x2="140" y2="37" stroke="#FDE8A0" stroke-width="0.6" opacity="0.9"/>
+  <line x1="144" y1="44" x2="140" y2="43" stroke="#FDE8A0" stroke-width="0.6" opacity="0.9"/>
+  <line x1="144" y1="50" x2="140" y2="49" stroke="#FDE8A0" stroke-width="0.6" opacity="0.9"/>
+  <line x1="144" y1="56" x2="140" y2="55" stroke="#FDE8A0" stroke-width="0.6" opacity="0.9"/>
+  <line x1="144" y1="62" x2="140" y2="61" stroke="#FDE8A0" stroke-width="0.6" opacity="0.9"/>
+  <line x1="144" y1="68" x2="140" y2="67" stroke="#FDE8A0" stroke-width="0.6" opacity="0.9"/>
+
+  <!-- ── Left inner page (on top of cover) ── -->
+  <path d="M78 20 C58 17 36 22 20 32 L20 66 C40 59 60 56 78 58 Z"
+        fill="url(#pgL)" filter="url(#pageShadow)"/>
+  <line x1="29" y1="40" x2="71" y2="36" stroke="#8B5C20" stroke-width="1.1" stroke-linecap="round" opacity="0.5"/>
+  <line x1="28" y1="47" x2="71" y2="43" stroke="#8B5C20" stroke-width="1.1" stroke-linecap="round" opacity="0.5"/>
+  <line x1="27" y1="54" x2="71" y2="50" stroke="#8B5C20" stroke-width="1.0" stroke-linecap="round" opacity="0.45"/>
+  <line x1="26" y1="61" x2="71" y2="57" stroke="#8B5C20" stroke-width="0.9" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- ── Right inner page (on top of cover) ── -->
+  <path d="M82 20 C102 17 124 22 140 32 L140 66 C120 59 100 56 82 58 Z"
+        fill="url(#pgR)" filter="url(#pageShadow)"/>
+  <line x1="89" y1="36" x2="131" y2="40" stroke="#8B5C20" stroke-width="1.1" stroke-linecap="round" opacity="0.5"/>
+  <line x1="89" y1="43" x2="132" y2="47" stroke="#8B5C20" stroke-width="1.1" stroke-linecap="round" opacity="0.5"/>
+  <line x1="89" y1="50" x2="133" y2="54" stroke="#8B5C20" stroke-width="1.0" stroke-linecap="round" opacity="0.45"/>
+  <line x1="89" y1="57" x2="134" y2="61" stroke="#8B5C20" stroke-width="0.9" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- ══════════════════════════════════════════
+       ANIMATED PAGES — sitting ON TOP, rising UP
+       Each page starts at the spine (x=80) and
+       sweeps outward & upward
+  ══════════════════════════════════════════ -->
+
+  <!-- LEFT animated pages (3 = furthest back/widest, 1 = closest/narrowest) -->
+  <g class="pl3">
+    <path d="M78 20 C65 10 44 6 22 10 L21 14 C43 10 65 14 78 24 Z"
+          fill="#C8A040" opacity="0.70" filter="url(#pageShadow)"/>
+  </g>
+  <g class="pl2">
+    <path d="M78 20 C66 8 46 4 24 7 L23 11 C45 8 66 12 78 22 Z"
+          fill="#DABA58" opacity="0.82" filter="url(#pageShadow)"/>
+  </g>
+  <g class="pl1">
+    <path d="M78 20 C67 6 48 2 26 4 L25 8 C47 6 67 10 78 20 Z"
+          fill="#F0D070" opacity="0.92" filter="url(#pageShadow)"/>
+  </g>
+  <!-- topmost left page (static, always visible) -->
+  <path d="M78 20 C68 4 50 0 28 2 L27 6 C49 4 68 8 78 18 Z"
+        fill="#FEF0B0"/>
+
+  <!-- RIGHT animated pages -->
+  <g class="pr3">
+    <path d="M82 20 C95 10 116 6 138 10 L139 14 C117 10 95 14 82 24 Z"
+          fill="#C8A040" opacity="0.70" filter="url(#pageShadow)"/>
+  </g>
+  <g class="pr2">
+    <path d="M82 20 C94 8 114 4 136 7 L137 11 C115 8 94 12 82 22 Z"
+          fill="#DABA58" opacity="0.82" filter="url(#pageShadow)"/>
+  </g>
+  <g class="pr1">
+    <path d="M82 20 C93 6 112 2 134 4 L135 8 C113 6 93 10 82 20 Z"
+          fill="#F0D070" opacity="0.92" filter="url(#pageShadow)"/>
+  </g>
+  <!-- topmost right page (static) -->
+  <path d="M82 20 C92 4 110 0 132 2 L133 6 C111 4 92 8 82 18 Z"
+        fill="#FEF0B0"/>
+
+  <!-- ── Spine (over everything) ── -->
+  <path d="M78 2 L82 2 L82 66 L78 66 Z" fill="url(#spineG)" filter="url(#pageShadow)"/>
+  <path d="M79 2 L80.2 2 L80.2 66 L79 66 Z" fill="#FFFFFF" opacity="0.10"/>
+
+  <!-- ── GUIDE text ── -->
+  <text x="80" y="102"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="14" font-weight="bold"
+        text-anchor="middle"
+        fill="#5C3810"
+        letter-spacing="4"
+        filter="url(#pageShadow)">GUIDE</text>
+</svg>
